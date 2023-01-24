@@ -325,7 +325,7 @@ ${additionalMessage}`,
     return 'linux-nixos'
   }
 
-  if (platform === 'linux' && arch === 'arm64') {
+  if ((platform === 'linux' || platform === 'android')  && arch === 'arm64') {
     // 64 bit ARM
     return `linux-arm64-openssl-${libssl || defaultLibssl}` as Platform
   }
